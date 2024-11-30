@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>File Uploaded Successfully</h1>
+    </header>
+    <main>
+        <p>Your file "{{ filename }}" has been uploaded.</p>
+        <a href="/upload" class="btn">Upload Another File</a>
+        <a href="/" class="back-link">Back to Home</a>
+    </main>
+</body>
+</html>

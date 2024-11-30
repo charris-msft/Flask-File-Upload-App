@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload New File</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Upload a File</h1>
+    </header>
+    <main>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div>
+                <input type="file" name="file" id="file">
+            </div>
+            <div>
+                <input type="submit" value="Upload" class="btn">
+            </div>
+        </form>
+        <a href="/" class="back-link">Back to Home</a>
+    </main>
+</body>
+</html>
