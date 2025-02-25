@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Text File - {{ filename }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ filename }}</h1>
+        <div class="text-content">
+            <pre>{{ content }}</pre>
+        </div>
+        <a href="{{ url_for('view_files') }}" class="button">Back to Files</a>
+    </div>
+</body>
+</html>

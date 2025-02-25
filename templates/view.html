@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Uploaded Files</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Uploaded Files</h1>
+        <div class="file-list">
+            {% for file in files %}
+            <div class="file-item">
+                <h3>{{ file }}</h3>
+                {% if file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')) %}
+                    <img src="{{ url_for('uploaded_file', filename=file) }}" alt="{{ file }}" class="preview">
+                {% elif file.lower().endswith(('.txt', '.csv', '.md', '.json')) %}
+                    <a href="{{ url_for('view_text_file', filename=file) }}">View text file</a>
+                {% else %}
+                    <a href="{{ url_for('uploaded_file', filename=file) }}">Download file</a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('upload') }}" class="button">Upload More Files</a>
+        <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+    </div>
+</body>
+</html>
