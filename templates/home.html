@@ -9,6 +9,11 @@
 <body>
     <header>
         <h1>Welcome to the File Upload App</h1>
+        <nav class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('upload') }}">Upload</a>
+            <a href="{{ url_for('view_files') }}">View Files</a>
+        </nav>
     </header>
     <main>
         <p>Click the button below to upload a file.</p>
