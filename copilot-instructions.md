@@ -1,0 +1,1 @@
+This is a python app, always use the .venv virtual environment
